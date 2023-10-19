@@ -1,0 +1,27 @@
+<RCC>
+  <qresource prefix="resources">
+    <file>font/hana_simplify.ttf</file>
+  </qresource>
+  <qresource prefix="resources">
+    <file>images/1.png</file>
+    <file>images/2.png</file>
+    <file>images/3.png</file>
+    <file>images/4.png</file>
+    <file>images/5.png</file>
+    <file>images/6.png</file>
+    <file>images/7.png</file>
+    <file>images/8.png</file>
+    <file>images/9.png</file>
+    <file>images/10.png</file>
+    <file>images/back.png</file>
+    <file>images/close.png</file>
+    <file>images/logo_yellow.ico</file>
+    <file>images/look.png</file>
+    <file>images/max.png</file>
+    <file>images/min.png</file>
+    <file>images/return.png</file>
+    <file>images/tips.png</file>
+    <file>images/logo.png</file>
+    <file>images/logo.ico</file>
+  </qresource>
+</RCC>

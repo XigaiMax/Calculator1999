@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>551</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="all_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>531</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#all_frame
+{
+	background:#272727;
+	border-radius:12px;
+}
+
+#calculate_button
+{
+	font-family:&quot;HanaMinA&quot;;
+	color:#99795C;
+	background:#B5B3AF;
+	font-size:15px;
+	font-weight:bold;
+	
+}
+
+QLabel
+{
+	color: #99795C;
+	font-weight:bold;
+	font-family:&quot;HanaMinA&quot;;
+	font-size:15px;
+}
+
+QLineEdit
+{	
+	background:#242524;
+	border:0px;
+	border-bottom: 1px solid #99795C;
+	color: #BEBAB8;
+	font-size:15px;
+	font-weight:bold;
+	font-family:&quot;HanaMinA&quot;;
+
+}
+
+
+
+QTextEdit
+{	
+	border-radius:7px;
+	border:0px;
+	background:#D5D3CF;
+	font-size:13px;
+	font-weight:bold;
+	font-family:&quot;HanaMinA&quot;;
+	color:#464F47;
+}
+
+QComboBox
+{
+	font-size:12px;
+	font-family:&quot;HanaMinA&quot;;
+	font-weight:bold;
+	color:#BEBAB8;
+	background:#242524;
+	border: 1px solid #99795C; 
+	border-radius:4px;
+}
+
+
+
+QComboBox QAbstractItemView 
+{	
+	font-size:12px;
+	font-family:&quot;HanaMinA&quot;;
+	font-weight:bold;
+	
+	outline: 0px solid gray;  /*取消选中虚线*/
+	border: 1px solid #99795C;
+	border-radius:4px;	
+	
+	color:#BEBAB8;
+	background-color: #242524;   
+	selection-background-color: #BEBAB8;   
+}
+
+
+QComboBox::drop-down 
+{
+	border:none;
+}
+
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="top_frame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>2</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#top_frame{
+
+border-top-left-radius:12px;
+border-top-right-radius:12px
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="button_frame">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>0</y>
+          <width>131</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+border:none;
+}
+QPushButton:hover{
+padding-botton:5px
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="pushbutton_min">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>images/min.png</normaloff>images/min.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_max">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>images/max.png</normaloff>images/max.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_close">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>images/close.png</normaloff>images/close.png</iconset>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QFrame" name="logo_frame">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>131</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="logo_label_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>131</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>images/logo.ico</pixmap>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="main_frame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>2</horstretch>
+         <verstretch>7</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>151</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="attack_input_Layout">
+         <item>
+          <widget class="QLabel" name="attack_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>面板攻击力：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="attack_input"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>151</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="critical_strike_rate_input_Layout">
+         <item>
+          <widget class="QLabel" name="critical_strike_rate_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>暴击率：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="input_Layout_3">
+           <item>
+            <widget class="QLineEdit" name="critical_strike_rate_input"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="sign_3">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>10</y>
+          <width>151</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="skill_ratio_input_Layout">
+         <item>
+          <widget class="QLabel" name="skill_ratio_laber">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>技能倍率：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="input_Layout_1">
+           <item>
+            <widget class="QLineEdit" name="skill_ratio_input"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="sign_1">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>60</y>
+          <width>151</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="critical_strike_ratio_input_Layout">
+         <item>
+          <widget class="QLabel" name="critical_strike_ratio_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>暴击创伤：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="input_Layout_4">
+           <item>
+            <widget class="QLineEdit" name="critical_strike_ratio_input"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="sign_4">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>151</width>
+          <height>53</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="damage_increase_input_Layout">
+         <item>
+          <widget class="QLabel" name="damage_increase_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>伤害提升：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="input_Layout_2">
+           <item>
+            <widget class="QLineEdit" name="damage_increase_input"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="sign_2">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>110</y>
+          <width>151</width>
+          <height>48</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="matchup_choice_combobox_Layout">
+         <item>
+          <widget class="QLabel" name="matchup_choice_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>属性克制：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="matchup_choice_combobox">
+           <item>
+            <property name="text">
+             <string>克制</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>非克制</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>160</y>
+          <width>151</width>
+          <height>48</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="skill_choice_combobox_Layout">
+         <item>
+          <widget class="QLabel" name="skill_choice_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>技能类型：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="skill_choice_combobox">
+           <item>
+            <property name="text">
+             <string>术法卡</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>仪式卡</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_9">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>160</y>
+          <width>151</width>
+          <height>48</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="damage_choice_combobox_Layout">
+         <item>
+          <widget class="QLabel" name="damage_choice_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>伤害类型：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="damage_choice_combobox">
+           <item>
+            <property name="text">
+             <string>现实创伤</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>精神创伤</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>210</y>
+          <width>151</width>
+          <height>94</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="heart_choice_combobox_Layout">
+         <item>
+          <widget class="QLabel" name="heart_choice_combobox_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>心相选择：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="heart_choice_combobox">
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>60</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>美丽新世界</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/1.png</normaloff>images/1.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>跳房子游戏</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/2.png</normaloff>images/2.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>第二次生命</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/3.png</normaloff>images/3.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>夜色亵渎者</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/4.png</normaloff>images/4.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>掌声如雷鸣</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/5.png</normaloff>images/5.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>好奇心宝贝</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/6.png</normaloff>images/6.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>大娱乐至上</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/7.png</normaloff>images/7.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>必要的记录</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/8.png</normaloff>images/8.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>在仙境之外</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/9.png</normaloff>images/9.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>可度量之心</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/10.png</normaloff>images/10.png</iconset>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QTextEdit" name="heart_info_text">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>210</y>
+          <width>151</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="placeholderText">
+         <string>请选择心相</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_11">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>300</y>
+          <width>151</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="enemy_choice_combobox_Layout">
+         <item>
+          <widget class="QLabel" name="enemy_choice_label">
+           <property name="font">
+            <font>
+             <family>HanaMinA</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>敌人选择：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="enemy_choice_combobox">
+           <item>
+            <property name="text">
+             <string>凶兆·天蛾人</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>厄兆·天蛾人</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>无防御测试怪</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QTextEdit" name="enemy_info_text">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>300</y>
+          <width>151</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="placeholderText">
+         <string>请选择敌人</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="calculate_button">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>350</y>
+          <width>151</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>计算</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>10</y>
+          <width>160</width>
+          <height>155</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="result_Layout">
+         <item>
+          <widget class="QLabel" name="result1_label">
+           <property name="text">
+            <string> 未暴击伤害：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="result1_output">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="result3_output">
+           <property name="text">
+            <string> 暴击伤害：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="result2_label">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="result3_label">
+           <property name="text">
+            <string> 暴击期望：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="result2_output">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushbutton_close</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushbutton_min</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>434</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
